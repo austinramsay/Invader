@@ -14,6 +14,6 @@
 #define WINDOW_HEIGHT 600
 
 // Asset paths
-#define PLAYER_1_PATH "assets/player.png"
+#define PLAYER_PATH "assets/player.png"
 
-#endif /* constants_h */
+#endif

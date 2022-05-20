@@ -5,9 +5,7 @@
 //  Created by Austin on 5/16/22.
 //
 
-#include <stdio.h>
 #include "game.h"
-#include "texturemanager.h"
 
 Game::Game() {
     // Constructor
@@ -34,7 +32,7 @@ void Game::init(const char *title, int pos_x, int pos_y, int width, int height, 
         
         isRunning = true;
         
-        player_tex = TextureManager::load_texture(PLAYER_1_PATH, renderer);
+        player = new GameObject(PLAYER_PATH, renderer, 0, 0);
         
     } else {
         std::cout << "Initialization failed." << std::endl;
@@ -68,17 +66,14 @@ void Game::handleEvents() {
 }
 
 void Game::update() {
-    count++;
-    dst_r.h = 16;
-    dst_r.w = 16;
-    dst_r.x = count;
-    
-    std::cout << count << std::endl;
+    player->update();
 }
 
 void Game::render() {
     SDL_RenderClear(renderer);
-    SDL_RenderCopy(renderer, player_tex, NULL, &dst_r);
+    
+    player->render();
+    
     SDL_RenderPresent(renderer);
 }
 

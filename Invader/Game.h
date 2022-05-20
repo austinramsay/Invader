@@ -8,9 +8,12 @@
 #ifndef base_h
 #define base_h
 
+#include <stdio.h>
 #include <iostream>
 #include <SDL2/SDL.h>
 #include <SDL2_image/SDL_image.h>
+#include "texture_manager.h"
+#include "game_object.h"
 #include "constants.h"
 
 class Game {
@@ -21,8 +24,8 @@ private:
     
     SDL_Window *window = nullptr;
     SDL_Renderer *renderer = nullptr;
-    SDL_Texture *player_tex = nullptr;
-    SDL_Rect src_r, dst_r;
+    
+    GameObject *player;
     
 public:
     static const int frame_delay = 1000 / FRAME_LIMIT;
