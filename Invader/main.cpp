@@ -6,7 +6,8 @@
 //
 
 #include <stdio.h>
-#include "Game.h"
+#include "game.h"
+#include "constants.h"
 
 int main(int argc, char* args[]) {
     
@@ -16,7 +17,7 @@ int main(int argc, char* args[]) {
     
     // Initialize new game and begin main loop
     Game *game = new Game();
-    game->init("Invader", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 600, false);
+    game->init("Invader", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, WINDOW_WIDTH, WINDOW_HEIGHT, false);
     
     while (game->running()) {
         frame_start = SDL_GetTicks();

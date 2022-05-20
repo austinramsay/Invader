@@ -6,7 +6,8 @@
 //
 
 #include <stdio.h>
-#include "Game.h"
+#include "game.h"
+#include "texturemanager.h"
 
 Game::Game() {
     // Constructor
@@ -32,14 +33,13 @@ void Game::init(const char *title, int pos_x, int pos_y, int width, int height, 
         }
         
         isRunning = true;
+        
+        player_tex = TextureManager::load_texture(PLAYER_1_PATH, renderer);
+        
     } else {
         std::cout << "Initialization failed." << std::endl;
         isRunning = false;
     }
-    
-    SDL_Surface *tmp_surface = IMG_Load("assets/player.png");
-    player_tex = SDL_CreateTextureFromSurface(renderer, tmp_surface);
-    SDL_FreeSurface(tmp_surface);
 }
 
 void Game::handleEvents() {

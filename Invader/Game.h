@@ -11,6 +11,7 @@
 #include <iostream>
 #include <SDL2/SDL.h>
 #include <SDL2_image/SDL_image.h>
+#include "constants.h"
 
 class Game {
     
@@ -24,8 +25,7 @@ private:
     SDL_Rect src_r, dst_r;
     
 public:
-    static const int frame_limit = 60;
-    static const int frame_delay = 1000 / frame_limit;
+    static const int frame_delay = 1000 / FRAME_LIMIT;
     
     Game();
     ~Game();
