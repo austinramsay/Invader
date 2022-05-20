@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DFDC6D8E2836EB0B00B52E22 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFDC6D8D2836EB0B00B52E22 /* SDL2_image.framework */; };
 		DFFE451F28329141003BAAF9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFFE451E28329141003BAAF9 /* main.cpp */; };
+		DFFE45272832917D003BAAF9 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFFE45262832917D003BAAF9 /* SDL2.framework */; };
+		DFFE452A2832A0A9003BAAF9 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFFE45292832A0A9003BAAF9 /* Game.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +26,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DFDC6D8D2836EB0B00B52E22 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
 		DFFE451B28329141003BAAF9 /* Invader */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Invader; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFFE451E28329141003BAAF9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		DFFE45262832917D003BAAF9 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
+		DFFE452828329F2C003BAAF9 /* Game.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		DFFE45292832A0A9003BAAF9 /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFDC6D8E2836EB0B00B52E22 /* SDL2_image.framework in Frameworks */,
+				DFFE45272832917D003BAAF9 /* SDL2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +52,7 @@
 			children = (
 				DFFE451D28329141003BAAF9 /* Invader */,
 				DFFE451C28329141003BAAF9 /* Products */,
+				DFFE45252832917D003BAAF9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +68,19 @@
 			isa = PBXGroup;
 			children = (
 				DFFE451E28329141003BAAF9 /* main.cpp */,
+				DFFE452828329F2C003BAAF9 /* Game.h */,
+				DFFE45292832A0A9003BAAF9 /* Game.cpp */,
 			);
 			path = Invader;
+			sourceTree = "<group>";
+		};
+		DFFE45252832917D003BAAF9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DFDC6D8D2836EB0B00B52E22 /* SDL2_image.framework */,
+				DFFE45262832917D003BAAF9 /* SDL2.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,7 +110,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastUpgradeCheck = 1330;
+				LastUpgradeCheck = 1340;
 				TargetAttributes = {
 					DFFE451A28329140003BAAF9 = {
 						CreatedOnToolsVersion = 13.3.1;
@@ -120,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFFE451F28329141003BAAF9 /* main.cpp in Sources */,
+				DFFE452A2832A0A9003BAAF9 /* Game.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +184,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				EXCLUDED_ARCHS = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -220,6 +243,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXCLUDED_ARCHS = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -238,7 +262,12 @@
 		DFFE452328329141003BAAF9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -246,7 +275,12 @@
 		DFFE452428329141003BAAF9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
