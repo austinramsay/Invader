@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DFDC6D8E2836EB0B00B52E22 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFDC6D8D2836EB0B00B52E22 /* SDL2_image.framework */; };
+		DFDC6D912837EAA600B52E22 /* TextureManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFDC6D902837EAA600B52E22 /* TextureManager.cpp */; };
 		DFFE451F28329141003BAAF9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFFE451E28329141003BAAF9 /* main.cpp */; };
 		DFFE45272832917D003BAAF9 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFFE45262832917D003BAAF9 /* SDL2.framework */; };
 		DFFE452A2832A0A9003BAAF9 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFFE45292832A0A9003BAAF9 /* Game.cpp */; };
@@ -27,6 +28,8 @@
 
 /* Begin PBXFileReference section */
 		DFDC6D8D2836EB0B00B52E22 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
+		DFDC6D8F2837EA6800B52E22 /* TextureManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextureManager.h; sourceTree = "<group>"; };
+		DFDC6D902837EAA600B52E22 /* TextureManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TextureManager.cpp; sourceTree = "<group>"; };
 		DFFE451B28329141003BAAF9 /* Invader */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Invader; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFFE451E28329141003BAAF9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		DFFE45262832917D003BAAF9 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
@@ -70,6 +73,8 @@
 				DFFE451E28329141003BAAF9 /* main.cpp */,
 				DFFE452828329F2C003BAAF9 /* Game.h */,
 				DFFE45292832A0A9003BAAF9 /* Game.cpp */,
+				DFDC6D8F2837EA6800B52E22 /* TextureManager.h */,
+				DFDC6D902837EAA600B52E22 /* TextureManager.cpp */,
 			);
 			path = Invader;
 			sourceTree = "<group>";
@@ -142,6 +147,7 @@
 			files = (
 				DFFE451F28329141003BAAF9 /* main.cpp in Sources */,
 				DFFE452A2832A0A9003BAAF9 /* Game.cpp in Sources */,
+				DFDC6D912837EAA600B52E22 /* TextureManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
